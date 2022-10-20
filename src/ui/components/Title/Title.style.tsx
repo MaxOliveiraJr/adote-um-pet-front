@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import theme from "../../themes/tema";
 
 export const TitleStyled = styled("h1")`
   font-size: 20px;

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Title from "../ui/components/Title/Title";
 import List from "../ui/components/List/List";
+import { Dialog, TextField } from "@mui/material";
 
 const Home: NextPage = () => {
   return (
@@ -34,6 +35,9 @@ const Home: NextPage = () => {
           },
         ]}
       />
+      <Dialog open={true} fullWidth PaperProps={{sx:{p:'40px'}}}>
+        <TextField  label={'E-mail'}/>
+      </Dialog>
     </div>
   );
 };

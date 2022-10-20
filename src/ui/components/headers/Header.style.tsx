@@ -1,7 +1,4 @@
 import { styled } from "@mui/material";
-//const paddingSize = '20px';
- /* padding:${paddingSize}; */
-  /* //padding: ${(props) => props.theme}; */
 
 export const HeaderContainer = styled("header")`
   display: flex;

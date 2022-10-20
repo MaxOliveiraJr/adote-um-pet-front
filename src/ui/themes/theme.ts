@@ -2,6 +2,7 @@ import { createTheme } from "@mui/system";
 
 const theme = createTheme({
     palette: {
+        mode:"dark",
         primary: {
             main: '#AE0FEA',
         },
@@ -12,12 +13,14 @@ const theme = createTheme({
             primary: '#293845',
             secondary: '#9EADBA',
         },
+
+        
     },
     typography: {
         fontFamily: 'Roboto, sans-serif',
     },
     shape: {
-        borderRadius: '3px',
+        borderRadius: 3,
     },
     components: {
         MuiButton: {
