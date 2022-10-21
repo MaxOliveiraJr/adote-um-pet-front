@@ -28,9 +28,14 @@ export default function List(props:ListProps) {
           <Informations>
             <Name>Bidu</Name>
             <Description>
-              {TextService.textLimited(pet.history,length)}
+              {TextService.textLimited(pet.history, length)}
             </Description>
-            <Button variant={"contained"} fullWidth>
+            <Button
+              variant={"contained"}
+              color={'secondary'}
+              fullWidth
+            >
+       
               Adotar
             </Button>
           </Informations>

@@ -1,13 +1,17 @@
 import type { NextPage } from "next";
 import Title from "../ui/components/Title/Title";
 import List from "../ui/components/List/List";
-import { Dialog, TextField } from "@mui/material";
+import { Button, Dialog,DialogActions ,Grid, Snackbar, TextField } from "@mui/material";
+import { useIndex } from "../data/hooks/pages/useIndex";
 
 const Home: NextPage = () => {
+
+ const {petList} = useIndex();
+
   return (
     <div>
       <Title
-        title="asdasdasd"
+        title=""
         subtitle={
           <span>
             Com um pequeno valor mensal, você <br />
@@ -16,28 +20,34 @@ const Home: NextPage = () => {
         }
       />
       <List
-        pets={[
-          {
-            id: 1,
-            name: "Bidu",
-            history: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim nemo quis placeat doloremque eligendi ratione officia voluptate! Voluptatem voluptatibus voluptate ad id perspiciatis culpa voluptas quod sequi recusandae debitis.
- `,
-            photo:
-              "https://conteudo.imguol.com.br/c/entretenimento/54/2020/04/28/cachorro-pug-1588098472110_v2_1x1.jpg",
-          },
-          {
-            id: 2,
-            name: "Bidu",
-            history: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim nemo quis placeat doloremque eligendi ratione officia voluptate! Voluptatem voluptatibus voluptate ad id perspiciatis culpa voluptas quod sequi recusandae debitis.
- `,
-            photo:
-              "https://conteudo.imguol.com.br/c/entretenimento/54/2020/04/28/cachorro-pug-1588098472110_v2_1x1.jpg",
-          },
-        ]}
+        pets={petList}
       />
-      <Dialog open={true} fullWidth PaperProps={{sx:{p:'40px'}}}>
-        <TextField  label={'E-mail'}/>
+      <Dialog open={false} fullWidth PaperProps={{ sx: { p: 5 } }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <TextField 
+            label={"E-mail"} 
+            type={'email'}
+            fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField 
+            label={"Quantia por mês"} 
+            type={'number'}
+            fullWidth />
+          </Grid>
+          <DialogActions sx={{ mt: 5, width:'100%' }}>
+            <Button color={"secondary"}>Cancelar</Button>
+            <Button variant={"contained"} color={"secondary"}>
+              Confirmar adoção
+            </Button>
+          </DialogActions>
+        </Grid>
       </Dialog>
+      <Snackbar  
+      open={false}
+      message={'osdisdf'}
+      />
     </div>
   );
 };
