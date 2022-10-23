@@ -1,10 +1,10 @@
 import { styled } from "@mui/material";
 
-export const ListStyled = styled('ul')`
-width:100%;
-max-width:800px;
-margin: 0 auto;
-padding: ${({theme})=> theme.spacing(2)}
+export const ListStyled = styled("ul")`
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: ${({ theme }) => theme.spacing(2)};
 `;
 
 export const ItemList = styled("li")`
@@ -20,7 +20,8 @@ export const ItemList = styled("li")`
 `;
 
 export const Photo = styled("img")`
-width:100%`;
+  width: 100%;
+`;
 
 export const Informations = styled("div")`
   display: flex;
@@ -28,12 +29,11 @@ export const Informations = styled("div")`
   gap: ${({ theme }) => theme.spacing(2)};
 `;
 
-
 export const Name = styled("h2")`
-margin:0;
+  margin: 0;
 `;
 
 export const Description = styled("p")`
   margin: 0;
-  word-wrap:break-word;
+  word-wrap: break-word;
 `;

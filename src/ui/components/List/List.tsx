@@ -9,17 +9,17 @@ import {
   Description,
 } from "./List.style";
 
-
-import { Pet } from '../../../data/@Types/Pets';
-import { TextService } from '../../../data/service/TextService'
+import { Pet } from "../../../data/@Types/Pets";
+import { TextService } from "../../../data/service/TextService";
 
 const length = 200;
 
 interface ListProps {
   pets: Pet[];
+  onSelect: (pet: Pet) => void;
 }
 
-export default function List(props:ListProps) {
+export default function List(props: ListProps) {
   return (
     <ListStyled>
       {props.pets.map((pet) => (
@@ -32,11 +32,11 @@ export default function List(props:ListProps) {
             </Description>
             <Button
               variant={"contained"}
-              color={'secondary'}
+              color={"secondary"}
               fullWidth
+              onClick={() => props.onSelect(pet)}
             >
-       
-              Adotar
+              Adotar {pet.name}
             </Button>
           </Informations>
         </ItemList>
