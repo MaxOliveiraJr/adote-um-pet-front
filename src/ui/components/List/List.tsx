@@ -26,7 +26,7 @@ export default function List(props: ListProps) {
         <ItemList key={pet.id}>
           <Photo src={pet.photo} alt={pet.name} />
           <Informations>
-            <Name>Bidu</Name>
+            <Name>{pet.name}</Name>
             <Description>
               {TextService.textLimited(pet.history, length)}
             </Description>

@@ -31,8 +31,8 @@ export function useIndex() {
             setMessage("Doação realizada com sucesso");
             clearForm();
           })
-          .catch((error: AxiosError | any) => {
-            setMessage(error.response.data.message);
+          .catch((error: AxiosError) => {
+            setMessage(error.response?.data.message);
           });
       } else {
         setMessage("Preencha todos os campos corretamente!");
@@ -44,9 +44,9 @@ export function useIndex() {
     return email.length > 0 && value.length > 0;
   }
 
-  function clearForm(){
-    setEmail('');
-    setValue('');
+  function clearForm() {
+    setEmail("");
+    setValue("");
   }
 
   return {

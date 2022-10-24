@@ -3,11 +3,17 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/private-theming";
 import theme from "../ui/themes/theme";
 import Header from "../ui/components/headers/Header";
+import HeaderAdmin from "../ui/components/headersAdmin/HeaderAdmin";
+import Router, { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
+  router.pathname;
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      {router.pathname === "/" ? <Header /> : <HeaderAdmin />}
+
       <Component {...pageProps} />
     </ThemeProvider>
   );
