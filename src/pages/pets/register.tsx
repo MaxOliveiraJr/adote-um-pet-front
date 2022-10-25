@@ -48,6 +48,7 @@ const PetRegister: NextPage = () => {
               onChange={(e) => setPhoto(e.target.value)}
               fullWidth
               label={"Foto"}
+              type={"url"}
               placeholder={"Digite o endereço da imagem"}
             ></TextField>
           </Grid>

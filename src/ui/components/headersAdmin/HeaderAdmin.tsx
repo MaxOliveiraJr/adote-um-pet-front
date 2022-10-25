@@ -5,12 +5,12 @@ export default function HeaderAdmin() {
   return (
     <HeaderContainer>
       <div>
-      <Logo src={"/imagens/logo.svg"}></Logo>
+        <Logo src={"/imagens/logo.svg"}></Logo>
         <LinksContainer>
-          <Link component={NextLink} href={"/pet/cadastro"}>
+          <Link component={NextLink} href={"/pets/register"}>
             <a> Cadastrar</a>
           </Link>
-          <Link component={NextLink} href={"/pet/relatorio"}>
+          <Link component={NextLink} href={"/pets/report"}>
             <a>
               Relatório
               <Box
