@@ -32,7 +32,6 @@ export default function List(props: ListProps) {
             </Description>
             <Button
               variant={"contained"}
-              color={"secondary"}
               fullWidth
               onClick={() => props.onSelect(pet)}
             >
